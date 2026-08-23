@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  const API_BASE = "http://127.0.0.1:8000";
+  const API_BASE =  "https://student-mental-health-score-prediction-pkev.onrender.com";
   
 
   const form = document.getElementById("predict-form");
@@ -277,7 +277,7 @@
     } catch (err) {
       renderError(
         "Can't reach the server",
-        `Couldn't connect to ${API_BASE}. Make sure the backend is running (uvicorn main:app --port 8000 --reload) and reachable from this page.`
+        `Couldn't connect to ${API_BASE}. Check that the deployed backend is available and try again.`
       );
     } finally {
       setSubmitting(false);
